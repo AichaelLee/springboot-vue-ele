@@ -10,3 +10,8 @@
 # 代码更新记录
 #### 2018-6-5
 1. 后台图片上传使用又拍云，[又拍云免费体验](https://console.upyun.com/register/?invite=HyTufSjS-)
+
+
+
+## 启动
+一开始项目总是启动一场，process finished with exit code 1，控制台也不输出日志，网上搜着问题可能是applicaztin.yml,删除掉了 logback文件

@@ -5,12 +5,10 @@ import com.imooc.constant.RedisConstant;
 import com.imooc.exception.SellerAuthorizeException;
 import com.imooc.utils.CookieUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -22,8 +20,8 @@ import javax.servlet.http.HttpServletRequest;
  * Created by 廖师兄
  * 2017-07-30 17:31
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 @Slf4j
 public class SellerAuthorizeAspect {
 
