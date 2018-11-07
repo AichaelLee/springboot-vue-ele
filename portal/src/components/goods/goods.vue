@@ -96,10 +96,11 @@
     created() {
       this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
 
-      const url = debug ? '/api/goods' : 'http://ustbhuangyi.com/sell/api/goods';
+     // const url = debug ? '/api/goods' : 'http://ustbhuangyi.com/sell/api/goods';
+     const url = 'http://localhost:8080/sell/buyer/product/list?sellerId=1';
       this.$http.get(url).then((response) => {
         response = response.body;
-        if (response.errno === ERR_OK) {
+        if (response.code === ERR_OK) {
           this.goods = response.data;
           this.$nextTick(() => {
             this._initScroll();
