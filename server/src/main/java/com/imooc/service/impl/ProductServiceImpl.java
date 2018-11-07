@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by 廖师兄
@@ -39,9 +38,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<ProductInfo> findUpAll() {
-        return repository.findByProductStatus(ProductStatusEnum.UP.getCode()).stream()
-                .map(e -> e.addImageHost(upYunConfig.getImageHost()))
-                .collect(Collectors.toList());
+        return repository.findByProductStatus(0);
     }
 
     @Override
